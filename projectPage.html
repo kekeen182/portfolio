@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <title>KeZeng's Portfolio</title>
+    <style>
+        /* 定义 .zengkelogo-1-icon 样式 */
+        .zengkelogo-1-icon {
+            position: absolute;
+            top: calc(50% - 29px);
+            left: calc(50% - 34px);
+            width: 68.2px;
+            height: 58px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        /* 定义 .navigationbar 样式 */
+        .navigationbar {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            background-color: #f8f8f8;
+            width: 1920px;
+            height: 80px;
+            overflow: hidden;
+        }
+
+        /* 定义 .intenship 样式 */
+        .intenship {
+            position: absolute;
+            top: 29px;
+            left: 200px;
+        }
+
+        /* 定义 .project1 样式 */
+        .project1 {
+            position: absolute;
+            top: 29px;
+            left: 563px;
+            color: #ff9f1c;
+        }
+
+        /* 定义 .about 样式 */
+        .about {
+            position: absolute;
+            top: 29px;
+            left: 1199px;
+            display: inline-block;
+            width: 220px;
+        }
+
+        /* 定义 .contact 样式 */
+        .contact {
+            position: absolute;
+            top: 29px;
+            left: 1632px;
+        }
+
+        /* 定义 .project-child 样式 */
+        .project-child {
+            position: absolute;
+            top: 114px;
+            left: 80px;
+            background-color: #f8f8f8;
+            width: 336px;
+            height: 414px;
+            overflow: hidden;
+        }
+
+        /* 定义 .project-item 样式 */
+        .project-item {
+            position: absolute;
+            top: 114px;
+            left: 436px;
+            background-color: #f8f8f8;
+            width: 336px;
+            height: 414px;
+            overflow: hidden;
+        }
+
+        /* 定义 .project-inner 样式 */
+        .project-inner {
+            position: absolute;
+            top: 114px;
+            left: 792px;
+            background-color: #f8f8f8;
+            width: 336px;
+            height: 414px;
+            overflow: hidden;
+        }
+
+        /* 定义 .frame-div 样式 */
+        .frame-div {
+            position: absolute;
+            top: 114px;
+            left: 1148px;
+            background-color: #f8f8f8;
+            width: 336px;
+            height: 414px;
+            overflow: hidden;
+        }
+
+        /* 定义 .project-child1 样式 */
+        .project-child1 {
+            position: absolute;
+            top: 114px;
+            left: 1504px;
+            background-color: #f8f8f8;
+            width: 336px;
+            height: 414px;
+            overflow: hidden;
+        }
+
+        /* 定义 .project 样式 */
+        .project {
+            width: 100%;
+            position: relative;
+            background-color: #fff;
+            height: 1080px;
+            overflow: hidden;
+            text-align: center;
+            font-size: 18px;
+            color: #000;
+            font-family: Montserrat;
+        }
+    </style>
+</head>
+<body>
+    <!-- 主要内容 -->
+    <div class="project">
+        <!-- 导航栏 -->
+        <div class="navigationbar">
+            <img class="zengkelogo-1-icon" alt="KeZeng Logo" src="0-zengkeLOGO.png" id="zengkeLOGOImage">
+        </div>
+        <!-- 页面标题 -->
+        <div class="intenship">INTENSHIP</div>
+        <div class="project1">PROJECT</div>
+        <div class="about">ABOUT</div>
+        <div class="contact">CONTACT</div>
+        <!-- 内容占位符 -->
+        <div class="project-child"></div>
+        <div class="project-item"></div>
+        <div class="project-inner"></div>
+        <div class="frame-div"></div>
+        <div class="project-child1"></div>
+    </div>
+
+    <!-- JavaScript 代码 -->
+    <script>
+        var zengkeLOGO1Image = document.getElementById("zengkeLOGOImage");
+        if (zengkeLOGO1Image) {
+            zengkeLOGO1Image.addEventListener("click", function (e) {
+                window.location.href = "0214ds跳转try.html"; // 跳转到指定页面
+            });
+        }
+    </script>
+</body>
+</html>

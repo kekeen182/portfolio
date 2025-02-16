@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KeZeng's Portfolio</title>
+    <!-- 引入 Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif; /* 默认英文字体 */
+        }
+
+        /* Container Styles */
+        .container {
+            width: 1920px;
+            height: 1080px;
+            position: relative;
+            background: white;
+        }
+
+        /* Header Styles */
+        .header {
+            width: 1920px;
+            height: 80px;
+            padding-top: 11px;
+            padding-bottom: 11px;
+            left: 0px;
+            top: 0px;
+            position: absolute;
+            background: #F8F8F8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header img {
+            width: 68.24px;
+            height: 58px;
+        }
+
+        /* Card Styles */
+        .card {
+            position: absolute;
+            bottom: 280px; /* 统一底边对齐 */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            transition: all 0.5s ease;
+        }
+
+        .card-content {
+            align-self: stretch;
+            width: 220px;
+            height: 380px;
+            background: #F8F8F8;
+            box-shadow: 0px 4px 5.699999809265137px 3px rgba(0, 0, 0, 0.25);
+            border-radius: 78px;
+            transition: all 0.3s ease; /* 添加过渡效果 */
+        }
+
+        .card-title {
+            align-self: stretch;
+            text-align: center;
+            color: black;
+            font-size: 24px;
+            font-family: 'Montserrat', sans-serif; /* 英文字体 */
+            font-weight: 500;
+            word-wrap: break-word;
+            transition: all 0.3s ease; /* 添加过渡效果 */
+        }
+
+        .card-subtitle {
+            align-self: stretch;
+            text-align: center;
+            color: black;
+            font-size: 24px;
+            font-family: 'Noto Sans', sans-serif; /* 中文字体 */
+            font-weight: 500;
+            word-wrap: break-word;
+            transition: all 0.3s ease; /* 添加过渡效果 */
+        }
+
+        /* Hero Section Styles */
+        .hero {
+            position: absolute;
+            bottom: 280px; /* 统一底边对齐 */
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 7px;
+            transition: all 0.5s ease;
+        }
+
+        .hero-content {
+            width: 330px;
+            height: 490px;
+            background: #F8F8F8;
+            box-shadow: 0px 4px 5.699999809265137px 3px rgba(0, 0, 0, 0.25);
+            border-radius: 62px;
+            transition: all 0.3s ease; /* 添加过渡效果 */
+        }
+
+        .hero-title {
+            align-self: stretch;
+            color: #FF9F1C;
+            font-size: 36px;
+            font-family: 'Montserrat', sans-serif; /* 英文字体 */
+            font-weight: 700;
+            word-wrap: break-word;
+            transition: all 0.3s ease; /* 添加过渡效果 */
+        }
+
+        .hero-subtitle {
+            align-self: stretch;
+            text-align: center;
+            color: #FF9F1C;
+            font-size: 36px;
+            font-family: 'Noto Sans', sans-serif; /* 中文字体 */
+            font-weight: 700;
+            word-wrap: break-word;
+            transition: all 0.3s ease; /* 添加过渡效果 */
+        }
+
+        /* 鼠标悬停时改变 Card 样式 */
+        .card:hover {
+            height: 597px;
+            left: 417px;
+            top: 213px;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 7px;
+            display: flex;
+        }
+
+        .card:hover .card-content {
+            width: 330px;
+            height: 490px;
+            background: #F8F8F8;
+            box-shadow: 0px 4px 5.699999809265137px 3px rgba(0, 0, 0, 0.25);
+            border-radius: 62px;
+        }
+
+        .card:hover .card-title {
+            align-self: stretch;
+            color: #FF9F1C;
+            font-size: 36px;
+            font-family: 'Montserrat', sans-serif; /* 英文字体 */
+            font-weight: 700;
+            word-wrap: break-word;
+        }
+
+        .card:hover .card-subtitle {
+            align-self: stretch;
+            text-align: center;
+            color: #FF9F1C;
+            font-size: 36px;
+            font-family: 'Noto Sans', sans-serif; /* 中文字体 */
+            font-weight: 700;
+            word-wrap: break-word;
+        }
+
+        /* 鼠标悬停时改变 Hero 样式 */
+        .hero.hero-hover {
+            height: 482px;
+            position: absolute;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 20px;
+            display: flex;
+        }
+
+        .hero.hero-hover .hero-content {
+            align-self: stretch;
+            width: 220px;
+            height: 380px;
+            background: #F8F8F8;
+            box-shadow: 0px 4px 5.699999809265137px 3px rgba(0, 0, 0, 0.25);
+            border-radius: 78px;
+        }
+
+        .hero.hero-hover .hero-title {
+            align-self: stretch;
+            text-align: center;
+            color: black;
+            font-size: 24px;
+            font-family: 'Montserrat', sans-serif; /* 英文字体 */
+            font-weight: 500;
+            word-wrap: break-word;
+        }
+
+        .hero.hero-hover .hero-subtitle {
+            align-self: stretch;
+            text-align: center;
+            color: black;
+            font-size: 24px;
+            font-family: 'Noto Sans', sans-serif; /* 中文字体 */
+            font-weight: 500;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header">
+            <img src="0-zengkeLOGO.png" alt="KeZeng Logo">
+        </div>
+
+        <!-- Hero Section -->
+        <div class="hero">
+            <div class="hero-content"></div>
+            <div class="hero-title">Hello, this is KeZeng !</div>
+            <div class="hero-subtitle">你好，我是曾柯！</div>
+        </div>
+
+        <!-- Cards Section -->
+        <div class="card"id='about' style="left: 1285px; bottom: 280px;">
+            <div class="card-content"></div>
+            <div class="card-title">ABOUT</div>
+            <div class="card-subtitle">基本信息</div>
+        </div>
+
+        <div class="card"id='intenship' style="left: 80px; bottom: 280px;">
+            <div class="card-content"></div>
+            <div class="card-title">INTENSHIP</div>
+            <div class="card-subtitle">实习经历</div>
+        </div>
+
+        <div class="card" id='contact' style="left: 1622px; bottom: 280px;">
+            <div class="card-content"></div>
+            <div class="card-title">CONTACT</div>
+            <div class="card-subtitle">联系我</div>
+        </div>
+
+        <div class="card" id='project' style="left: 417px; bottom: 280px;">
+            <div class="card-content"></div>
+            <div class="card-title">PROJECT</div>
+            <div class="card-subtitle">作品集</div>
+        </div>
+    </div>
+
+    <script>
+        // 获取所有 card 元素
+        const cards = document.querySelectorAll('.card');
+        const hero = document.querySelector('.hero');
+
+        // 为每个 card 添加事件监听器
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                hero.classList.add('hero-hover');
+            });
+
+            card.addEventListener('mouseleave', () => {
+                hero.classList.remove('hero-hover');
+            });
+        });
+    </script>
+    <script>
+        // 获取card id=4元素
+        const projectCard = document.querySelector('#project');
+
+        // 添加点击事件，跳转到新页面
+        projectCard.addEventListener('click', () => {
+            window.location.href = 'projectPage.html'; // 跳转到新页面
+        });
+    </script>
+</body>
+</html>
